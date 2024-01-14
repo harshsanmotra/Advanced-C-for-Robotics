@@ -1,0 +1,33 @@
+#include <iostream>
+#include <set>
+using namespace std;
+int main() {
+  multiset<char> s;
+
+  // inserting elements in random order .
+  s.insert('R');
+  s.insert('O');
+  s.insert('B');
+  s.insert('O');
+  s.insert('T');
+
+  // printing set s
+  // initialising the iterator, iterating to the beginning of the set.
+
+  set<char>::iterator it;
+  cout << "The element of set s are : \n";
+  for (it = s.begin(); it != s.end(); it++) {
+    cout << *it << " ";
+  }
+
+  multiset<char> s1{s.end(), s.begin()};
+
+  set<char>::iterator it1;
+  cout << "The element of set s are : \n";
+  for (it1 = s1.begin(); it1 != s1.end(); it1++) {
+    cout << *it1 << " ";
+  }
+  cout << endl;
+  cout << "The size of set :\n " << s.size() << endl;
+  return 0;
+}
